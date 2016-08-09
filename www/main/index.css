@@ -1,0 +1,605 @@
+/* index.css */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+@media screen and (min-width: 601px)
+{
+    html
+    {
+        font-size: 32px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 600px)
+{
+    /* CSS Code */
+    html
+    {
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 351px) and (max-width: 449px)
+{
+    html
+    {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 349px)
+{
+    /* CSS Code */
+    html
+    {
+        font-size: 20px;
+    }
+}
+@media screen and (max-height: 800px) and (min-height: 600px)
+{
+    /* CSS Code */
+    html
+    {
+        font-size: 24px;
+    }
+}
+@media screen and (max-height: 1000px)and (min-height: 801px)
+{
+    /* CSS Code */
+    html
+    {
+        font-size: 28px;
+    }
+}
+#loadingLayout
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(255,255,255,.9);
+}
+
+.content
+{
+    font-family: 'Microsoft Yahei';
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/*header*/
+.header
+{
+    position: relative;
+    padding-top: 1rem;
+    /* transform: translateY(50%); */
+    
+    width: 100%;
+    height: 10%;
+
+    text-align: center;
+
+    color: #65bf7f;
+}
+.titleLeft
+{
+    display: inline-block;
+
+    width: .75rem;
+    height: .5rem;
+    margin: 0 .2rem;
+    background-image: url(titleleft.png);
+    background-repeat: no-repeat;
+}
+.titleRight
+{
+    display: inline-block;
+
+    width: .75rem;
+    height: .5rem;
+    margin: 0 .2rem;
+    background-image: url(titleright.png);
+    background-repeat: no-repeat;
+}
+.channel
+{
+    font-size: 1.2rem;
+    font-weight: lighter;
+    /* padding: 0 .5rem; */
+    max-width: 80%;
+   /*  display: inline-block; */
+    line-height: 1.5rem;
+    color: #65bf7f;
+}
+.channelname
+{
+    max-width: 60%;
+    
+    text-overflow : ellipsis;
+    white-space:nowrap ;
+    overflow: hidden; 
+   
+}
+.mhz
+{
+    display: inline-block;
+}
+/*play*/
+.play
+{
+    position: relative;
+
+    width: 12rem;
+    height: 50%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.wrap
+{
+    position: relative;
+ 
+
+    margin: 0 auto;
+}
+.image
+{
+    position: relative;
+    top: 1.5rem;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(img.jpg);
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto;
+
+   
+    border-radius: 55%;
+}
+#myCanvas
+{
+    position: absolute;
+    z-index: 1000000;
+    left: 0;
+
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+}
+
+
+/*info*/
+.info
+{
+    position: relative;
+
+    height: 10%;
+
+    text-align: center;
+}
+
+.songname
+{
+    font-size: .8rem;
+
+    display: block;
+
+    color: #333;
+
+}
+
+.artist
+{
+    font-size: .7rem;
+
+    display: block;
+
+    padding-top: .5rem;
+
+    color: #c3c3c3;
+}
+
+/* nav */
+.nav
+{
+    position: relative;
+
+    height: 10%;
+
+    text-align: center;
+
+    color: #c3c3c3;
+}
+.record
+{
+    background-position: -64px 0;
+}
+.recordActive
+{
+    background-position: -64px -32px;
+}
+.lyric
+{
+    background-position: -32px 0;
+}
+.lyricActive
+{
+    background-position: -32px -32px;
+}
+.more
+{
+    background-position: 0 0;
+}
+.moreActive
+{
+    background-position: 0 -32px;
+}
+.tab
+{
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+    margin: 0 1rem ;
+
+    transform: translateY(50%);
+
+    background-image: url(doubanicons@2x.png);
+    background-size: 128px 128px;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/* crtl */
+
+.crtl
+{
+    font-size: 2rem;
+
+    height: 15%;
+
+    text-align: center;
+}
+
+.btns
+{
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+    margin: .5rem 1.5rem;
+
+    transform: translateY(50%);
+
+    background-image: url(doubanicons@2x.png);
+    background-size: 128px 128px;
+    background-repeat: no-repeat;
+}
+.favor
+{
+    background-position: 0 -64px;
+}
+.favorActive
+{
+    background-position: 0 -96px;
+}
+.delete
+{
+    background-position: -32px -64px;
+}
+.next
+{
+    background-position: -64px -64px;
+}
+.nextActive
+{
+    background-position: -64px -96px;
+}
+
+/*pause*/
+#pause
+{
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    height: 10%;
+
+    display: none;
+
+    width: 100%;
+
+    background-color: rgba(255,255,255,.7);
+}
+.pauseBtn
+{
+    position: relative;
+    top: 50%;
+
+    width: 32px;
+    height: 32px;
+    margin: -16px auto;
+
+    background-image: url(doubanicons@2x.png);
+    background-repeat: no-repeat;
+    background-position: -96px -64px;
+    background-size: 128px 128px;
+}
+#pauseimg
+{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    display: none;
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.7);
+}
+/*lrc*/
+#lrcLayout
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 15%;
+    left: 0;
+
+    display: none;
+
+    background-color: rgba(255,255,255,.95);
+}
+.lrcHead
+{
+    height: 10%;
+}
+#lrcScroll
+{
+    overflow: hidden;
+
+    height: 70%;
+}
+.lrcContent
+{
+    line-height: 2rem;
+
+    position: relative;
+
+    overflow-y: hidden;
+
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.nolyric
+{
+    font-size: .7rem;
+    height: 15rem;
+    line-height: 15rem;
+    color: #65bf7f;
+}
+.lrcs
+{
+    font-size: .7rem;
+
+    color: rgb(190,190,190);
+}
+.currentlyric
+{
+    font-size: .8rem;
+    color: #65bf7f;
+}
+.lrcInfo
+{
+    position: relative;
+
+    width: 100%;
+    height: 20%;
+}
+.titleArtist
+{
+    font-size: .7rem;
+    line-height: 1.3rem;
+
+    position: relative;
+    top: 40%;
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: black;
+    border-top: 1px  solid rgb(234,234,234);
+    background-color: rgba(246,246,246,.7);
+}
+.lrcartist
+{
+    color: rgb(190,190,190);
+}
+.marquee
+{
+    overflow: -webkit-marquee;
+
+    white-space: nowrap;
+
+    -webkit-marquee-direction: forwards;
+    -webkit-marquee-speed: slow;
+    -webkit-marquee-style: alternate;
+}
+
+/*menuLayout*/
+#menuLayout
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+.menuback
+{
+    height: 70%;
+}
+.menuContent
+{
+    height: 15%;
+    border-top:  1px solid rgb(234, 234, 234);
+    border-bottom: 1px solid rgb(234, 234, 234);
+    text-align: center;
+}
+.menuitem
+{
+    display: inline-block;
+    height: 3rem;
+    margin: 0 1rem;
+    
+    
+}
+.menuIcon
+{
+    display: block;
+    
+    width: 32px;
+    height: 32px;
+    margin: 0.3rem auto;
+
+    
+    
+    background-image: url(doubanicons@2x.png);
+    background-size: 128px 128px;
+    background-repeat: no-repeat;
+}
+.menuTitle
+{
+    
+    font-size: .5rem;
+   
+}
+.downloadIcon
+{
+    background-position: -96px 0px;
+}
+.shareIcon
+{
+    background-position: -96px -96px;
+}
+/*record*/
+#recordLayout
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+.recordback
+{
+    
+    font-size: 1rem;
+    /* border-bottom: 1px solid rgb(195, 190, 190); */
+    /* background-color: #e1f7eb; */
+    background-color: rgb(188, 226, 158);
+}
+.recordtotop
+{
+    height: 10%;
+    
+    /* border-top: 2px solid rgb(215, 215, 215); */
+    /* background-color: #e1f7eb; */
+   /*  background-color: #6bbd7a; */
+}
+.recordtotopTitle
+{
+    
+    font-size: .7rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.recordleftBtn
+{
+    color: rgb(61, 148, 26);
+    color: rgb(61, 148, 26);
+    margin-left: 0.7rem;
+    margin-right: -1.9rem;
+    margin-top: 0.25rem;
+}
+.recordTitle
+{
+    
+    color: rgb(61, 148, 26);
+}
+#recordScroll
+{
+    margin-top: 44px;
+    height: 80%;
+    overflow: hidden;
+}
+.recordContent
+{
+    overflow: hidden;
+    border-top:  1px solid rgb(234, 234, 234);
+    
+}
+.recordTotal
+{
+    font-size: .8rem;
+    height: 2rem;
+    border-bottom:1px solid rgb(234, 234, 234);
+   
+    padding: .5rem 0 0 .5rem;
+}
+.record-total
+{
+    padding:0 .2rem;
+}
+.recordItem
+{
+    height: 2rem;
+    border-bottom:1px solid rgb(234, 234, 234);
+    
+    margin: 0 .5rem;
+    padding-top: .5rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.recordsongname
+{
+    font-size: 0.7rem;
+    max-width:70%; 
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    
+}
+.recordartist
+{
+    max-width: 30%;
+    font-size: 0.5rem;
+    color: rgb(190,190,190);
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+}

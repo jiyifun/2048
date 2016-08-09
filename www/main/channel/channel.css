@@ -1,0 +1,61 @@
+/*channelLayout*/
+#channelLayout
+{
+    position: absolute;
+    top:0;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(255,255,255,0.7);
+    z-index: 2;
+    overflow: hidden;
+    
+    
+
+}
+.channelback
+{
+	position: relative;
+	height: 15%;
+	width: 100%;
+}
+#channelScroll
+{
+    overflow: hidden;
+    height: 80%;
+}
+.channels
+{
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	
+	
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.8);
+}
+.channelLi
+{
+	display: inline-block;
+	height: 5rem;
+	width: 5rem;
+	margin:  1rem auto;
+}
+.channelimg
+{
+	margin: 0 0.5rem;
+	display: inline-block;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url(../img.jpg);
+}
+.channeltitle
+{
+	text-align: center;
+	margin-top: 0.5rem;
+	font-size: 0.6rem;
+}

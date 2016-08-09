@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Butterfly</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+
+  <meta http-equiv="X-Frame-Options" content="ALLOW-FROM">
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <!-- 3rd part UI ratchet -->
+  <link href="../ratchet/css/ratchet.min.css" rel="stylesheet"/>
+  <!-- <link href="../ratchet/css/ratchet-theme-ios.min.css" rel="stylesheet"/> -->
+  <!-- butterfly.js UI -->
+  <link href="../butterfly/css/butterfly.css" rel="stylesheet"/>
+  <!-- theme -->
+  <link href="theme.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="2048.css">
+  <link rel="stylesheet" type="text/css" href="css/social.umeng.css" />
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="channel/channel.css">
+  <link rel="stylesheet" type="text/css" href="api/loading.css">
+  
+  <script type="text/javascript" src="../butterfly/js/require.js" data-main="../butterfly/js/butterfly-amd"></script>
+</head>
+<body>
+
+    <div id="main" data-view="$StackView">
+
+      <div id="main-page" data-view="main/index">
+     <!--   <header class="bar bar-nav">
+          <h1 class="title">Butterfly</h1>
+        </header>
+       <div class="content"> 
+          
+       </div> -->
+        <header>
+          <h1>2048</h1>
+            <div class="headBox">
+              <a id ="newgamebutton">New Game</a>
+              <p class = "score">SCORE<span id = "score"></span></p>
+            </div>
+        </header>
+        <div id = "grid-container">
+            <div class = "grid-cell" id = "grid-cell-0-0"></div>
+            <div class = "grid-cell" id = "grid-cell-0-1"></div>
+            <div class = "grid-cell" id = "grid-cell-0-2"></div>
+            <div class = "grid-cell" id = "grid-cell-0-3"></div>
+
+            <div class = "grid-cell" id = "grid-cell-1-0"></div>
+            <div class = "grid-cell" id = "grid-cell-1-1"></div>
+            <div class = "grid-cell" id = "grid-cell-1-2"></div>
+            <div class = "grid-cell" id = "grid-cell-1-3"></div>
+            
+            <div class = "grid-cell" id = "grid-cell-2-0"></div>
+            <div class = "grid-cell" id = "grid-cell-2-1"></div>
+            <div class = "grid-cell" id = "grid-cell-2-2"></div>
+            <div class = "grid-cell" id = "grid-cell-2-3"></div>
+
+            <div class = "grid-cell" id = "grid-cell-3-0"></div>
+            <div class = "grid-cell" id = "grid-cell-3-1"></div>
+            <div class = "grid-cell" id = "grid-cell-3-2"></div>
+            <div class = "grid-cell" id = "grid-cell-3-3"></div>
+        </div>
+        <div class="musicBox">
+            <a class ="musicbutton"></a>
+            
+            <div class="musicInfo">
+                <h2 class="musicName">歌名</h2>
+                <p class="musicSinger">歌手</p>
+            </div>
+            
+        </div>
+
+
+        <div class = "content">
+
+            <div class = "header">
+              <a class="recordleftBtn icon icon-left-nav pull-left"></a><a class = "channel"><div class = "titleLeft"></div><span class = "channelname">我的频道</span><div class = "titleRight"></div></a>
+            </div>
+            <!-- <div class = "bar bar-nav recordback"><p class="recordTitle title">收听记录</p></div>
+                    <div id="recordScroll"> -->
+            <div class = "play">
+              <div class="wrap">
+                <img class = "image" >
+                <canvas id="myCanvas" width="200" height="200">
+                Your browser does not support the canvas element.
+                </canvas>
+                <div id = "pauseimg">
+                 <div class="pauseBtn"></div>
+                </div>
+                  
+              </div>
+            </div>
+            <div class = "info">
+              <span class = "songname">未知歌名</span>
+              <span class = "artist">未知歌手</span>
+            </div>
+            <div class = "nav">
+              <a class = "record tab"></a>
+              <a class = "lyric tab"></a>
+              <a class = "more tab"></a>
+            </div>
+            <div class = "crtl">
+              <a class = " favor btns" ></a>
+              <a class = " delete btns" ></a>
+              <a class = " next btns" ></a>
+            </div>
+            <audio id = "audio" autoplay = "autoplay">Your browser does not support the audio element.</audio>
+            <div id = "pause" >
+            </div>
+            <div id = "lrcLayout">
+              <div class = "lrcHead"></div>
+              <div id="lrcScroll">
+                <div class="lrcContent"></div>
+              </div>
+              <div class="lrcInfo">
+                  <p class="titleArtist"><span class="lrctitle" ></span><span class = "lrcartist"></span></p>
+              </div>
+            </div>
+            <div id = "channelLayout">
+              <div class ="channelback"></div>
+              <div id="channelScroll">
+                <ul class = "channels">
+                  
+                </ul>
+              </div>
+            </div>
+            <div id = "menuLayout">
+                <div class ="menuback"></div>
+                <div class="menuContent">
+                    <div class="menuitem downloadbtn"><span class="menuIcon downloadIcon"></span><p class="menuTitle">单曲下载</p></div>
+                    
+                    <div class="menuitem sharebtn"><span class="menuIcon shareIcon"></span><p class="menuTitle">单曲分享</p></div>
+                </div>
+            </div>
+            <div id="recordLayout">
+                    <div class = "bar bar-nav recordback"><a class="recordleftBtn icon icon-left-nav pull-left"></a><p class="recordTitle title">收听记录</p></div>
+                    <div id="recordScroll">
+                          <ul class="recordContent">
+                                <li class="recordTotal">共<span class="record-total">20</span>首</li>
+                               
+                          </ul>
+                    </div>
+                    <div class="recordtotop"><p class="recordtotopTitle">轻触返回顶部</p></div>
+            </div>
+            <div id = "loadingLayout" >
+                <div class="spinner">
+                  <div class="spinner-container container1">
+                      <div class="circle1"></div>
+                      <div class="circle2"></div>
+                      <div class="circle3"></div>
+                      <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container2">
+                      <div class="circle1"></div>
+                      <div class="circle2"></div>
+                      <div class="circle3"></div>
+                      <div class="circle4"></div>
+                    </div>
+                    <div class="spinner-container container3">
+                      <div class="circle1"></div>
+                      <div class="circle2"></div>
+                      <div class="circle3"></div>
+                      <div class="circle4"></div>
+                    </div>
+                    <p class="loadingTitle">正在加载</p>
+                </div>
+            </div>
+          </div>
+        <div id = "gameover">
+          <p>Game <br>
+            is<br> 
+            Over!
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="js/social.umeng.js"></script>
+</body>
+</html>
